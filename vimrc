@@ -194,3 +194,6 @@ endfu
 nmap <C-_> :call CommentLineANSI()<CR>
 imap <C-_> <C-O> :call CommentLineANSI()<CR>
 vmap <C-_> :call CommentLineANSI()<CR>gv
+
+"latex
+let g:tex_flavor='latex'
