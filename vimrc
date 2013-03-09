@@ -70,8 +70,10 @@ nnoremap <leader>ft Vatzf
 " Create dictionary for custom expansions
 set dictionary+=/Users/jeff_way/.vim/dict.txt
 "Opens a vertical split and switches over (\v)
-nnoremap <leader>v <C-w>v<C-w>l
-nnoremap <leader>s <C-w>s<C-w>l
+nnoremap <leader>v :bel vsp 
+nnoremap <leader>s :bel sp 
+"Opens a new tab
+nnoremap <leader>t :tabnew<CR>
 "Split windows below the current window.
 set splitbelow
 " session settings
