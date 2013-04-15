@@ -15,8 +15,7 @@ alias ll='ls -al'
 alias more='less -R'
 alias vi='vim'
 alias l1='ls -1'
-alias time='/usr/bin/time -p'
-alias google-chrome='ssh -X assembly google-chrome'
+alias time='\time -p'
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -35,13 +34,14 @@ alias google-chrome='ssh -X assembly google-chrome'
 
 
 # Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(git)
 
+[[ -s "$HOME/.zshrc_custom" ]] && . "$HOME/.zshrc_custom"
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
@@ -62,8 +62,3 @@ zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:*:killall:*:processes-names' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:*:killall:*' menu yes select
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
-
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
