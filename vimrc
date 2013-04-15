@@ -7,7 +7,7 @@
 "Enable mouse scrolling
 set mousem=extend
 set mouse=a
-colorscheme peachpuff
+colorscheme jellybeans
 "Forget compatibility with Vi. Who cares.
 set nocompatible
 "Enable filetypes

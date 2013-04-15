@@ -45,7 +45,9 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=~/bin:/filer/tmp2/wlangford/usr//bin:/ilab/users/wtl17/bin:/filer/tmp2/wlangford/usr//bin:/ilab/users/wtl17/bin:/usr/lib64/qt-3.3/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+export PATH=~/bin:/usr/local/bin:$PATH
+#export PATH=~/bin:/usr/lib64/qt-3.3/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
+
 
 zstyle ':completion:*' completer _complete _ignored _correct _approximate
 zstyle ':completion:*' matcher-list 'm:{[:lower:]}={[:upper:]}' ''
@@ -59,3 +61,9 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:*:kill:*' menu yes select
 zstyle ':completion:*:*:killall:*:processes-names' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:*:killall:*' menu yes select
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
