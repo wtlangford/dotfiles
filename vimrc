@@ -8,6 +8,8 @@
 set mousem=extend
 set mouse=a
 colorscheme jellybeans
+set foldmethod=syntax
+set foldlevel=15
 "Forget compatibility with Vi. Who cares.
 set nocompatible
 "Enable filetypes
@@ -62,7 +64,7 @@ set go-=T
 "Hard-wrap paragraphs of text
 nnoremap <leader>q gqip
 "Enable code folding
-set foldenable
+set nofoldenable
 "Hide mouse when typing
 set mousehide
 "Shortcut to fold tags with leader (usually \) + ft
