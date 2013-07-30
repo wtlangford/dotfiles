@@ -4,6 +4,11 @@
 " http://net.tutsplus.com
 "
 
+set background=light
+let g:badwolf_darkgutter=0
+let g:badwolf_css_props_highlight=1
+let g:badwolf_tabline=1
+let g:badwolf_html_link_underline=1
 "Enable mouse scrolling
 set mousem=extend
 set mouse=a
@@ -143,8 +148,6 @@ nmap <leader>hm :cd ~/ <CR>
 " Shortcut to opening a virtual split to right of current pane
 " Makes more sense than opening to the left
 nmap <leader>bv :bel vsp
-" Saves file when Vim window loses focus
-au FocusLost * :wa
 " Backups
 set backupdir=~/.vim/tmp/backup// " backups
 set directory=~/.vim/tmp/swap// " swap files
