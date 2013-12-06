@@ -43,6 +43,7 @@ plugins=(git)
 
 [[ -s "$HOME/.zshrc_custom" ]] && . "$HOME/.zshrc_custom"
 source $ZSH/oh-my-zsh.sh
+autoload -U zmv
 
 # Customize to your needs...
 export PATH=~/bin:/usr/local/bin:$PATH
