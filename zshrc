@@ -7,6 +7,7 @@ ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 #ZSH_THEME="robbyrussell"
 ZSH_THEME="terminalparty"
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -36,14 +37,18 @@ DISABLE_AUTO_UPDATE="true"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 #COMPLETION_WAITING_DOTS="true"
 
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+fpath=(~/.zsh/completion $fpath)
+plugins=(git go)
 
 [[ -s "$HOME/.zshrc_custom" ]] && . "$HOME/.zshrc_custom"
 source $ZSH/oh-my-zsh.sh
 autoload -U zmv
+
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%} x%{$fg[yellow]%}"
 
 # Customize to your needs...
 export PATH=~/bin:/usr/local/bin:$PATH
