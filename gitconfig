@@ -1,0 +1,19 @@
+[user]
+	name = William Langford
+	email = wlangfor@gmail.com
+[diff]
+	tool = vimdiff
+[merge]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[push]
+	default = matching
+[color]
+	status = auto
+	ui = auto
+[alias]
+	tug = pull
+	st = status
+	dt = difftool
+	vd = difftool

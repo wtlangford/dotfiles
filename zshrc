@@ -47,9 +47,9 @@ plugins=(git go)
 [[ -s "$HOME/.zshrc_custom" ]] && . "$HOME/.zshrc_custom"
 source $ZSH/oh-my-zsh.sh
 autoload -U zmv
-
 ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[red]%} x%{$fg[yellow]%}"
 
+unsetopt autopushd
 # Customize to your needs...
 export PATH=~/bin:/usr/local/bin:$PATH
 #export PATH=~/bin:/usr/lib64/qt-3.3/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin
