@@ -1,5 +1,6 @@
 #!/bin/sh
-if [ -d "~/.oh-my-zsh" ]; then
+if [ -d "$HOME/.oh-my-zsh" ]
+then
 	cd ~/.oh-my-zsh
 	git pull
 else
