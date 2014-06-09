@@ -17,3 +17,5 @@
 	st = status
 	dt = difftool
 	vd = difftool
+[core]
+	editor = vim
