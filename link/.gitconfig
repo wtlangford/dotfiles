@@ -17,5 +17,8 @@
 	st = status
 	dt = difftool
 	vd = difftool
+	pullr = pull --rebase
+	rpull = pull --rebase
+	gist = !"git diff | gist -p -t diff"
 [core]
 	editor = vim

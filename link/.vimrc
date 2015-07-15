@@ -17,10 +17,23 @@ set foldmethod=syntax
 set foldlevel=15
 "Forget compatibility with Vi. Who cares.
 set nocompatible
+
+" Vundle
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim/
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'fatih/vim-go'
+Plugin 'majutsushi/tagbar'
+
+call vundle#end()
+
 "Enable filetypes
-filetype on
-filetype plugin on
-filetype indent on
+filetype plugin indent on
+
 syntax on
 "Write the old file out when switching between files.
 set autowrite
@@ -163,11 +176,6 @@ set showmatch " show matching brackets
 map! ;h <a href=""></a><ESC>5hi
 :command Initc <leader>main
 map <leader>main i#include <stdio.h><CR><CR>int main(int argc, char **argv) {<CR><TAB>printf("Hello, world!\n");<CR>return 0;<CR>}<ESC>2ki
-
-"Pathogen
-call pathogen#infect()
-call pathogen#helptags()
-
 
 
 "Prebuilt C template
