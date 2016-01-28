@@ -8,7 +8,7 @@
 [difftool]
 	prompt = false
 [push]
-	default = matching
+	default = simple
 [color]
 	status = auto
 	ui = auto
@@ -19,6 +19,12 @@
 	vd = difftool
 	pullr = pull --rebase
 	rpull = pull --rebase
+	diffc = diff --cached
 	gist = !"git diff | gist -p -t diff"
+	sr = !"git rev-parse --short HEAD"
+	sh = !"git sr"
+	shc = !"git sh | tr -d '\n' | pbcopy"
+	src = !"git sr | tr -d '\n' | pbcopy"
+	graph = log --graph --full-history --all --color --pretty=format:"%x1b[31m%h%x09%x1b[32m%d%x1b[0m%x20%s"
 [core]
 	editor = vim

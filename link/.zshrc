@@ -41,8 +41,12 @@ DISABLE_AUTO_UPDATE="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-fpath=(~/.zsh/completion $fpath)
-plugins=(git go)
+#fpath=(~/.zsh/completion $fpath)
+plugins=(gitfast go brew httpie osx jira vagrant)
+
+mkcd() {
+	mkdir "$1" && cd "$1"
+}
 
 [[ -s "$HOME/.zshrc_custom" ]] && . "$HOME/.zshrc_custom"
 source $ZSH/oh-my-zsh.sh

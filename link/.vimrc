@@ -13,8 +13,19 @@ let g:badwolf_html_link_underline=1
 set mousem=extend
 set mouse=a
 colorscheme jellybeans
+
+"Fix for background color issues
+if &term =~'xterm-256color'
+	set t_ut=
+	if has("mouse_sgr")
+		set ttymouse=sgr
+	elseif has("mouse_xterm2")
+		set ttymouse=xterm2
+	endif
+endif
+
 set foldmethod=syntax
-set foldlevel=15
+set foldlevel=2
 "Forget compatibility with Vi. Who cares.
 set nocompatible
 
@@ -28,6 +39,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'fatih/vim-go'
 Plugin 'majutsushi/tagbar'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'chooh/brightscript.vim'
+Plugin 'tpope/vim-rbenv'
 
 call vundle#end()
 
@@ -100,8 +114,6 @@ set splitbelow
 set sessionoptions=resize,winpos,winsize,buffers,tabpages,folds,curdir,help
 "Set up an HTML5 template for all new .html files
 "autocmd BufNewFile * silent! 0r $VIMHOME/templates/%:e.tpl
-"Load the current buffer in Firefox - Mac specific.
-abbrev ff :! open -a firefox.app %:p<cr>
 "Map a change directory to the desktop - Mac specific
 nmap <leader>d :cd ~/Desktop<cr>:e.<cr>
 "Shortcut for editing  vimrc file in a new tab
@@ -121,7 +133,7 @@ set wildmenu
 "Auto-completion menu
 set wildmode=list:longest
 "http://vim.wikia.com/wiki/Make_Vim_completion_popup_menu_work_just_like_in_an_IDE
-set completeopt=longest,menuone
+set completeopt=longest,menuone,preview
 inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
