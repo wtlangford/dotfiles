@@ -17,6 +17,7 @@ alias more='less -R'
 alias vi='vim'
 alias l1='ls -1'
 alias time='\time -p'
+alias cdp='cd -P'
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
@@ -42,7 +43,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 #fpath=(~/.zsh/completion $fpath)
-plugins=(gitfast go brew httpie osx jira vagrant)
+plugins=(go brew httpie osx vagrant colored-man)
 
 mkcd() {
 	mkdir "$1" && cd "$1"

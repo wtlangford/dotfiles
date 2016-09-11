@@ -4,15 +4,9 @@
 " http://net.tutsplus.com
 "
 
-set background=light
-let g:badwolf_darkgutter=0
-let g:badwolf_css_props_highlight=1
-let g:badwolf_tabline=1
-let g:badwolf_html_link_underline=1
 "Enable mouse scrolling
 set mousem=extend
 set mouse=a
-colorscheme jellybeans
 
 "Fix for background color issues
 if &term =~'xterm-256color'
@@ -22,6 +16,10 @@ if &term =~'xterm-256color'
 	elseif has("mouse_xterm2")
 		set ttymouse=xterm2
 	endif
+endif
+
+if has("multi_byte_encoding")
+	set fillchars=vert:│,fold:—
 endif
 
 set foldmethod=syntax
@@ -42,8 +40,24 @@ Plugin 'majutsushi/tagbar'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'chooh/brightscript.vim'
 Plugin 'tpope/vim-rbenv'
+Plugin 'vim-scripts/SyntaxRange'
+Plugin 'tpope/vim-rails'
+Plugin 'pearofducks/ansible-vim'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'nathanaelkane/vim-indent-guides'
+
+Plugin 'rizzatti/dash.vim'
+Plugin 'garyburd/go-explorer'
+Plugin 'hashivim/vim-terraform'
 
 call vundle#end()
+
+let g:indent_guides_enable_on_vim_startup = 1
+colorscheme jellybeans
+
+"Ansible tweaks
+let g:ansible_extra_syntaxes = "upstart.vim sh.vim json.vim"
+autocmd BufRead,BufNewFile ~/src/build/ansible/*.yml set ft=ansible
 
 "Enable filetypes
 filetype plugin indent on
