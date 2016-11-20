@@ -52,6 +52,7 @@ Plugin 'hashivim/vim-terraform'
 
 call vundle#end()
 
+let g:syntastic_go_checkers = ['go', 'golint', 'govet', 'errcheck']
 let g:indent_guides_enable_on_vim_startup = 1
 colorscheme jellybeans
 
@@ -61,6 +62,9 @@ autocmd BufRead,BufNewFile ~/src/build/ansible/*.yml set ft=ansible
 
 "Enable filetypes
 filetype plugin indent on
+
+":Q is :q
+:command! Q q
 
 syntax on
 "Write the old file out when switching between files.
@@ -200,7 +204,7 @@ set backup " enable backup
 set showmatch " show matching brackets
 " print empty <a> tag
 map! ;h <a href=""></a><ESC>5hi
-:command Initc <leader>main
+:command! Initc <leader>main
 map <leader>main i#include <stdio.h><CR><CR>int main(int argc, char **argv) {<CR><TAB>printf("Hello, world!\n");<CR>return 0;<CR>}<ESC>2ki
 
 
